@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "FHJuYJ4xOuu6QBdsyg+4CHGCKlzGyqMHCURoT5co99VGr8FuC3Hd/IjmJUdtc9Oh9KP3mpfq7ch+GqfEN/FaKQ==",
+  "success": true,
+  "projectFilePath": "D:\\Năm 2\\New folder\\Source Code\\Page Navigation App\\Page Navigation App\\Page Navigation App.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\trinh\\.nuget\\packages\\mahapps.metro.iconpacks\\4.11.0\\mahapps.metro.iconpacks.4.11.0.nupkg.sha512",
+    "C:\\Users\\trinh\\.nuget\\packages\\mahapps.metro.iconpacks.material\\4.11.0\\mahapps.metro.iconpacks.material.4.11.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="Page_Navigation_App.View.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Page_Navigation_App.View"
+             mc:Ignorable="d"
+             d:DesignHeight="600"
+             d:DesignWidth="465">
+
+
+    <!--Music Section-->
+    <StackPanel Grid.Column="1" Background="White" Margin="40 60 10 0">
+        <TextBlock Text="Home" Style="{StaticResource menuTitle}"/>
+
+        <Border CornerRadius="20" Margin="0 20 0 0">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#6A5495" Offset="0"/>
+                    <GradientStop Color="#C1AEFC" Offset="1.6"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="0" Opacity="0.4" Color="#1fae7e"/>
+            </Border.Effect>
+
+            <Grid>
+                <Border Opacity="0.07" CornerRadius="20">
+                    <!--<Border.Background>
+                        <ImageBrush ImageSource="/Images/home_page.png"/>
+                    </Border.Background>-->
+                </Border>
+
+                <!--Music List-->
+                <StackPanel Margin="30">
+                    <TextBlock Text="Daily Singer" Foreground="White" FontSize="26" FontWeight="Bold"/>
+                    <TextBlock Text="Wren Evans" Foreground="#c0e6de" FontSize="18" FontWeight="SemiBold" Margin="0 10 0 20"/>
+
+                    <!--<uc:SongItems Number="01" Title="Love Story" Time="03:59"/>
+                    <uc:SongItems Number="02" Title="You Need To Calm" Time="03:39"/>
+                    <uc:SongItems Number="03" Title="Fashion Tan Gai" Time="02:59"/>
+                    <uc:SongItems Number="04" Title="Trao" Time="03:33"/>
+                    <uc:SongItems Number="05" Title="Mau Do" Time="05:52"/>
+                    <uc:SongItems Number="06" Title="Tung Quen" Time="04:47"/>
+                    <uc:SongItems Number="07" Title="Thich Em Hoi Nhieu" Time="06:20"/>-->
+                </StackPanel>
+
+            </Grid>
+        </Border>
+    </StackPanel>
+</UserControl>
