@@ -9,6 +9,7 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/customer_page.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/home_icon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/home_page.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/img_customer.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/img_home.png")]
@@ -18,11 +19,15 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/img_shipment.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/img_transaction.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/order_page.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/playlist_icon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/product_page.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/setting_icon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/setting_page.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/shipment_page.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/shutdown_def.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/shutdown_mo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/songs_icon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/transaction_page.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/videos_icon.png")]
 
 

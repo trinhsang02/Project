@@ -13,6 +13,7 @@
     <None Remove="Fonts\Rubik-Medium.ttf" />
     <None Remove="Fonts\Rubik-Regular.ttf" />
     <None Remove="Images\customer_page.png" />
+    <None Remove="Images\home_icon.png" />
     <None Remove="Images\home_page.png" />
     <None Remove="Images\Image1.jpg" />
     <None Remove="Images\img_customer.png" />
@@ -23,12 +24,16 @@
     <None Remove="Images\img_shipment.png" />
     <None Remove="Images\img_transaction.png" />
     <None Remove="Images\order_page.png" />
+    <None Remove="Images\playlist_icon.png" />
     <None Remove="Images\product_page.png" />
+    <None Remove="Images\setting_icon.png" />
     <None Remove="Images\setting_page.png" />
     <None Remove="Images\shipment_page.png" />
     <None Remove="Images\shutdown_def.png" />
     <None Remove="Images\shutdown_mo.png" />
+    <None Remove="Images\songs_icon.png" />
     <None Remove="Images\transaction_page.png" />
+    <None Remove="Images\videos_icon.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,6 +47,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Content Include="Images\customer_page.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\home_icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\home_page.png">
@@ -71,7 +79,13 @@
     <Content Include="Images\order_page.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\playlist_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\product_page.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\setting_icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\setting_page.png">
@@ -86,7 +100,13 @@
     <Content Include="Images\shutdown_mo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\songs_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\transaction_page.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\videos_icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

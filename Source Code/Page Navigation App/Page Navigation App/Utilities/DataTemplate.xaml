@@ -7,24 +7,16 @@
         <view:Home />
     </DataTemplate>
 
-    <DataTemplate DataType="{x:Type vm:CustomerVM}">
-        <view:Customers />
+    <DataTemplate DataType="{x:Type vm:SongsVM}">
+        <view:Songs />
     </DataTemplate>
 
-    <DataTemplate DataType="{x:Type vm:ProductVM}">
-        <view:Products />
+    <DataTemplate DataType="{x:Type vm:VideosVM}">
+        <view:Videos />
     </DataTemplate>
 
-    <DataTemplate DataType="{x:Type vm:OrderVM}">
-        <view:Orders />
-    </DataTemplate>
-
-    <DataTemplate DataType="{x:Type vm:TransactionVM}">
-        <view:Transactions />
-    </DataTemplate>
-
-    <DataTemplate DataType="{x:Type vm:ShipmentVM}">
-        <view:Shipments />
+    <DataTemplate DataType="{x:Type vm:PlaylistsVM}">
+        <view:Playlists />
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type vm:SettingVM}">

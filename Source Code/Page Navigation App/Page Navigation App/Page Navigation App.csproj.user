@@ -7,25 +7,19 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="View\Customers.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\Home.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\Orders.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\Products.xaml.cs">
+    <Compile Update="View\PLaylists.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\Settings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\Shipments.xaml.cs">
+    <Compile Update="View\Songs.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\Transactions.xaml.cs">
+    <Compile Update="View\Videos.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -57,25 +51,19 @@
     <Page Update="Utilities\DataTemplate.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\Customers.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="View\Home.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\Orders.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\Products.xaml">
+    <Page Update="View\Playlists.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Settings.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\Shipments.xaml">
+    <Page Update="View\Songs.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\Transactions.xaml">
+    <Page Update="View\Videos.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
