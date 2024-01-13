@@ -22,7 +22,7 @@ namespace VietCam
 {
     public partial class Form1 : Form
     {
-     
+
         public Form1()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace VietCam
         [DllImport("user32.dll")]
         public static extern bool UnregisterHotKey(IntPtr hWnd, int id);
         const int MYACTION_HOTKEY_ID = 1;
-      
+
         enum KeyModifier
         {
             None = 0,
@@ -43,7 +43,7 @@ namespace VietCam
             WinKey = 8
         }
 
-        public int[] Key = new int[] { 2, 3};
+        public int[] Key = new int[] { 2, 3 };
         #endregion
 
 
@@ -73,7 +73,7 @@ namespace VietCam
             {
                 UnregisterHotKey(this.Handle, Key[0]);
                 UnregisterHotKey(this.Handle, Key[1]);
-              
+
             }
             catch (Exception)
             {
@@ -92,10 +92,10 @@ namespace VietCam
 
                 if (m.Msg == 0x0312)
                 {
-                 
-                    Keys key = (Keys)(((int)m.LParam >> 16) & 0xFFFF);                  
-                    KeyModifier modifier = (KeyModifier)((int)m.LParam & 0xFFFF);      
-                    int id = m.WParam.ToInt32();                                      
+
+                    Keys key = (Keys)(((int)m.LParam >> 16) & 0xFFFF);
+                    KeyModifier modifier = (KeyModifier)((int)m.LParam & 0xFFFF);
+                    int id = m.WParam.ToInt32();
 
                     switch (id)
                     {
@@ -109,7 +109,7 @@ namespace VietCam
                                 camerapic_Click(this, new EventArgs());
                                 break;
                             }
-                    
+
                     }
                 }
             }
@@ -142,7 +142,7 @@ namespace VietCam
         private string path;
 
         #endregion
- 
+
 
         #region Xử lý quay và chụp
         private void ptrRec_Click(object sender, EventArgs e)//Nhấn nút rec
@@ -202,7 +202,8 @@ namespace VietCam
                     {
                         OpenFile(AdrImg + @"/" + NameImg);
                     }
-                }else
+                }
+                else
                 {
                     MessageBox.Show("Thư mục lưu ảnh không tồn tại, mời chọn thư mục khác!");
                 }
@@ -221,11 +222,11 @@ namespace VietCam
             NameVideo = NameApp + "-Video-" + DateTime.Now.Day + "-" + DateTime.Now.Month + "-" + DateTime.Now.Year + "-"
                  + DateTime.Now.Hour + "-" + DateTime.Now.Minute + "-" + DateTime.Now.Second + "-" + DateTime.Now.Millisecond
                  + @".mp4";
-           string filename = AdrVideo + @"\" + NameVideo;
+            string filename = AdrVideo + @"\" + NameVideo;
 
             if (flagQuay == false) // Nếu chưa quay thì bắt đầu quay
             {
-                
+
 
                 if (Directory.Exists(AdrVideo))//Kiểm tra thư mục lưu file tồn tại không
                 {
@@ -248,9 +249,9 @@ namespace VietCam
 
                         AddVideoXml(AdrVideo, NameVideo); // thêm video vào danh sách
 
-                       
 
-                        writer.Open(filename, s.Width, s.Height,FPS, VideoCodec.MPEG4, 5000000);
+
+                        writer.Open(filename, s.Width, s.Height, FPS, VideoCodec.MPEG4, 5000000);
                         timer1.Interval = 90;
 
                         timer1.Start();//ghi
@@ -264,7 +265,8 @@ namespace VietCam
                 {
                     MessageBox.Show("Thư mục lưu video không tồn tại, mời chọn thư mục khác!");
                 }
-            }else // nếu đang quay thì xử lý dừng
+            }
+            else // nếu đang quay thì xử lý dừng
 
             {
 
@@ -292,12 +294,12 @@ namespace VietCam
                 labe5 = "0";
                 labe6 = "0";
 
-               
+
                 DialogResult rs = MessageBox.Show("Đã lưu video, mở xem ngay?", "VietCam", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Information);
-                if(rs == DialogResult.Yes)
+                if (rs == DialogResult.Yes)
                 {
-                    OpenFile(lvVideo.Items[lvVideo.Items.Count-1].SubItems[1].Text + "\\" + lvVideo.Items[lvVideo.Items.Count-1].Text);
+                    OpenFile(lvVideo.Items[lvVideo.Items.Count - 1].SubItems[1].Text + "\\" + lvVideo.Items[lvVideo.Items.Count - 1].Text);
                 }
             }
         }
@@ -348,9 +350,9 @@ namespace VietCam
 
             timer2.Start();
 
-              float i = (int)System.Windows.SystemParameters.PrimaryScreenWidth;
+            float i = (int)System.Windows.SystemParameters.PrimaryScreenWidth;
 
-           s = new Size(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width, System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height);
+            s = new Size(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width, System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height);
 
             bt = new Bitmap(
               s.Width,
@@ -361,7 +363,7 @@ namespace VietCam
 
             loadXml(false);//Load list image
 
-         
+
 
         }
         //Giao diện Chỉnh sửa nút tabcontrol
@@ -395,9 +397,9 @@ namespace VietCam
 
                 // Vẽ một màu nền khác và không vẽ hình chữ nhật tiêu điểm.
 
-                _textBrush = new SolidBrush(Color.White);
+                _textBrush = new SolidBrush(Color.Black);
 
-                color = new SolidBrush(Color.FromArgb(56, 160, 107));
+                color = new SolidBrush(Color.FromArgb(153, 209, 211));
 
                 g.FillRectangle(color, e.Bounds);
 
@@ -430,6 +432,22 @@ namespace VietCam
 
             g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
 
+
+            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
+            int radius = 10; // Điều chỉnh độ cong của góc
+            int x = _tabBounds.X;
+            int y = _tabBounds.Y;
+            int width = _tabBounds.Width;
+            int height = _tabBounds.Height;
+
+            path.AddArc(x, y, radius, radius, 180, 90);
+            path.AddArc(x + width - radius, y, radius, radius, 270, 90);
+            path.AddArc(x + width - radius, y + height - radius, radius, radius, 0, 90);
+            path.AddArc(x, y + height - radius, radius, radius, 90, 90);
+            path.CloseFigure();
+
+            // Vẽ hình chữ nhật với góc bo
+            g.DrawPath(new Pen(color), path);
 
         }
         #endregion
@@ -757,7 +775,7 @@ namespace VietCam
             WindowState = FormWindowState.Normal;
         }
 
-       
+
         //Thanh công cụ cho icon ẩn
         private void openToolStripMenuItem_Click(object sender, EventArgs e) //nút mở trong icon
         {
@@ -875,6 +893,6 @@ namespace VietCam
         }
         #endregion
 
-     
+
     }
 }

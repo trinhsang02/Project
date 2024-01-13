@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />
+    <None Include="Resources\MTS_RECORDER.png" />
     <None Include="Resources\Pause.png" />
     <None Include="Resources\Continue.png" />
     <None Include="Resources\Capture.png" />

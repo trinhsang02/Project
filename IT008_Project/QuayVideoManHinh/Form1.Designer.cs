@@ -59,16 +59,17 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.About = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.VietCam = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.VietCam = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbTime = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnrectop = new System.Windows.Forms.Panel();
             this.picPause = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -78,8 +79,6 @@
             this.ptrRec = new System.Windows.Forms.PictureBox();
             this.ptrStop = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -95,6 +94,7 @@
             this.captureImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Home.SuspendLayout();
@@ -106,9 +106,10 @@
             this.Listimage.SuspendLayout();
             this.About.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnrectop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPause)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picContinue)).BeginInit();
@@ -116,8 +117,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptrRec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptrStop)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -415,6 +416,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(183)))), ((int)(((byte)(183)))));
+            this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.label4);
@@ -422,6 +424,26 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(772, 413);
             this.panel4.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.VietCam);
+            this.panel7.Location = new System.Drawing.Point(31, 10);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(718, 51);
+            this.panel7.TabIndex = 1;
+            // 
+            // VietCam
+            // 
+            this.VietCam.AutoSize = true;
+            this.VietCam.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VietCam.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.VietCam.Location = new System.Drawing.Point(3, 16);
+            this.VietCam.Name = "VietCam";
+            this.VietCam.Size = new System.Drawing.Size(187, 30);
+            this.VietCam.TabIndex = 0;
+            this.VietCam.Text = "MTS Recorder";
+            this.VietCam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel8
             // 
@@ -478,26 +500,6 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "ABOUT US:";
             // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.VietCam);
-            this.panel7.Location = new System.Drawing.Point(31, 10);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(718, 51);
-            this.panel7.TabIndex = 1;
-            // 
-            // VietCam
-            // 
-            this.VietCam.AutoSize = true;
-            this.VietCam.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VietCam.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.VietCam.Location = new System.Drawing.Point(3, 16);
-            this.VietCam.Name = "VietCam";
-            this.VietCam.Size = new System.Drawing.Size(187, 30);
-            this.VietCam.TabIndex = 0;
-            this.VietCam.Text = "MTS Recorder";
-            this.VietCam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -512,11 +514,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(209)))), ((int)(((byte)(211)))));
-            this.panel2.Controls.Add(this.lbTime);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.pnrectop);
-            this.panel2.Location = new System.Drawing.Point(12, 64);
+            this.panel2.Location = new System.Drawing.Point(0, 55);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(956, 140);
+            this.panel2.Size = new System.Drawing.Size(981, 149);
             this.panel2.TabIndex = 1;
             // 
             // lbTime
@@ -524,15 +526,26 @@
             this.lbTime.AutoSize = true;
             this.lbTime.Font = new System.Drawing.Font("Microsoft YaHei", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTime.ForeColor = System.Drawing.Color.Maroon;
-            this.lbTime.Location = new System.Drawing.Point(107, 46);
+            this.lbTime.Location = new System.Drawing.Point(-9, 31);
             this.lbTime.Name = "lbTime";
             this.lbTime.Size = new System.Drawing.Size(204, 56);
             this.lbTime.TabIndex = 1;
             this.lbTime.Text = "00:00:00";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VietCam.Properties.Resources.MTS_RECORDER;
+            this.pictureBox1.Location = new System.Drawing.Point(11, -68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(256, 247);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // pnrectop
             // 
             this.pnrectop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(209)))), ((int)(((byte)(211)))));
+            this.pnrectop.Controls.Add(this.lbTime);
             this.pnrectop.Controls.Add(this.picPause);
             this.pnrectop.Controls.Add(this.label10);
             this.pnrectop.Controls.Add(this.label9);
@@ -634,39 +647,17 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(195)))), ((int)(((byte)(201)))));
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.panel3.Location = new System.Drawing.Point(1, -7);
+            this.panel3.Location = new System.Drawing.Point(-12, -7);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(980, 64);
+            this.panel3.Size = new System.Drawing.Size(993, 64);
             this.panel3.TabIndex = 2;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
             this.panel3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseUp);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(11, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(63, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 28);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "MTS Recorder";
             // 
             // button3
             // 
@@ -775,6 +766,16 @@
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::VietCam.Properties.Resources.MTS_RECORDER;
+            this.pictureBox2.Location = new System.Drawing.Point(490, 187);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(212, 223);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -804,12 +805,12 @@
             this.Listimage.ResumeLayout(false);
             this.About.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnrectop.ResumeLayout(false);
             this.pnrectop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPause)).EndInit();
@@ -818,9 +819,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptrRec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptrStop)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -831,7 +831,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox ptrRec;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox ptrStop;
@@ -892,6 +891,7 @@
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
