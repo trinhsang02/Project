@@ -1,4 +1,4 @@
-﻿namespace VietCam
+﻿namespace MTS_Recorder
 {
     partial class Form1
     {
@@ -59,8 +59,9 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.About = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.VietCam = new System.Windows.Forms.Label();
+            this.MTS_Recorder = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -68,9 +69,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lbTime = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnrectop = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.lbTime = new System.Windows.Forms.Label();
             this.picPause = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -79,7 +81,6 @@
             this.ptrRec = new System.Windows.Forms.PictureBox();
             this.ptrStop = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -94,7 +95,7 @@
             this.captureImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Home.SuspendLayout();
@@ -106,6 +107,7 @@
             this.Listimage.SuspendLayout();
             this.About.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -118,7 +120,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptrStop)).BeginInit();
             this.panel3.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -293,7 +294,7 @@
             this.Listvideo.Padding = new System.Windows.Forms.Padding(3);
             this.Listvideo.Size = new System.Drawing.Size(784, 434);
             this.Listvideo.TabIndex = 2;
-            this.Listvideo.Text = "List Video";
+            this.Listvideo.Text = "Videos";
             this.Listvideo.UseVisualStyleBackColor = true;
             // 
             // btnDeleteVD
@@ -353,7 +354,7 @@
             this.Listimage.Padding = new System.Windows.Forms.Padding(3);
             this.Listimage.Size = new System.Drawing.Size(784, 434);
             this.Listimage.TabIndex = 3;
-            this.Listimage.Text = "List Image";
+            this.Listimage.Text = "Images";
             this.Listimage.UseVisualStyleBackColor = true;
             // 
             // btnDeleteA
@@ -410,7 +411,7 @@
             this.About.Padding = new System.Windows.Forms.Padding(3);
             this.About.Size = new System.Drawing.Size(784, 434);
             this.About.TabIndex = 5;
-            this.About.Text = "About";
+            this.About.Text = "Information";
             this.About.UseVisualStyleBackColor = true;
             // 
             // panel4
@@ -425,25 +426,35 @@
             this.panel4.Size = new System.Drawing.Size(772, 413);
             this.panel4.TabIndex = 1;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MTS_Recorder.Properties.Resources.Icon;
+            this.pictureBox2.Location = new System.Drawing.Point(546, 229);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(177, 163);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.VietCam);
+            this.panel7.Controls.Add(this.MTS_Recorder);
             this.panel7.Location = new System.Drawing.Point(31, 10);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(718, 51);
             this.panel7.TabIndex = 1;
             // 
-            // VietCam
+            // MTS_Recorder
             // 
-            this.VietCam.AutoSize = true;
-            this.VietCam.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VietCam.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.VietCam.Location = new System.Drawing.Point(3, 16);
-            this.VietCam.Name = "VietCam";
-            this.VietCam.Size = new System.Drawing.Size(187, 30);
-            this.VietCam.TabIndex = 0;
-            this.VietCam.Text = "MTS Recorder";
-            this.VietCam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MTS_Recorder.AutoSize = true;
+            this.MTS_Recorder.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTS_Recorder.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.MTS_Recorder.Location = new System.Drawing.Point(3, 16);
+            this.MTS_Recorder.Name = "MTS_Recorder";
+            this.MTS_Recorder.Size = new System.Drawing.Size(187, 30);
+            this.MTS_Recorder.TabIndex = 0;
+            this.MTS_Recorder.Text = "MTS Recorder";
+            this.MTS_Recorder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel8
             // 
@@ -514,6 +525,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(209)))), ((int)(((byte)(211)))));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.pnrectop);
             this.panel2.Location = new System.Drawing.Point(0, 55);
@@ -521,23 +534,12 @@
             this.panel2.Size = new System.Drawing.Size(981, 149);
             this.panel2.TabIndex = 1;
             // 
-            // lbTime
-            // 
-            this.lbTime.AutoSize = true;
-            this.lbTime.Font = new System.Drawing.Font("Microsoft YaHei", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTime.ForeColor = System.Drawing.Color.Maroon;
-            this.lbTime.Location = new System.Drawing.Point(-9, 31);
-            this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(204, 56);
-            this.lbTime.TabIndex = 1;
-            this.lbTime.Text = "00:00:00";
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::VietCam.Properties.Resources.MTS_RECORDER;
-            this.pictureBox1.Location = new System.Drawing.Point(11, -68);
+            this.pictureBox1.Image = global::MTS_Recorder.Properties.Resources.Icon;
+            this.pictureBox1.Location = new System.Drawing.Point(43, -15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 247);
+            this.pictureBox1.Size = new System.Drawing.Size(203, 194);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -553,16 +555,41 @@
             this.pnrectop.Controls.Add(this.camerapic);
             this.pnrectop.Controls.Add(this.ptrRec);
             this.pnrectop.Controls.Add(this.ptrStop);
-            this.pnrectop.Location = new System.Drawing.Point(340, 13);
+            this.pnrectop.Location = new System.Drawing.Point(342, 13);
             this.pnrectop.Name = "pnrectop";
-            this.pnrectop.Size = new System.Drawing.Size(613, 123);
+            this.pnrectop.Size = new System.Drawing.Size(638, 123);
             this.pnrectop.TabIndex = 0;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.CausesValidation = false;
+            this.button3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::MTS_Recorder.Properties.Resources.Hidee;
+            this.button3.Location = new System.Drawing.Point(283, 40);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(64, 58);
+            this.button3.TabIndex = 0;
+            this.button3.UseCompatibleTextRendering = true;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // lbTime
+            // 
+            this.lbTime.AutoSize = true;
+            this.lbTime.Font = new System.Drawing.Font("Microsoft YaHei", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.ForeColor = System.Drawing.Color.Maroon;
+            this.lbTime.Location = new System.Drawing.Point(69, 31);
+            this.lbTime.Name = "lbTime";
+            this.lbTime.Size = new System.Drawing.Size(204, 56);
+            this.lbTime.TabIndex = 1;
+            this.lbTime.Text = "00:00:00";
             // 
             // picPause
             // 
             this.picPause.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picPause.Image = global::VietCam.Properties.Resources.Pause;
-            this.picPause.Location = new System.Drawing.Point(409, 35);
+            this.picPause.Image = global::MTS_Recorder.Properties.Resources.Pause;
+            this.picPause.Location = new System.Drawing.Point(467, 37);
             this.picPause.Name = "picPause";
             this.picPause.Size = new System.Drawing.Size(29, 36);
             this.picPause.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -576,7 +603,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(510, 86);
+            this.label10.Location = new System.Drawing.Point(557, 88);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(28, 20);
             this.label10.TabIndex = 4;
@@ -587,7 +614,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(293, 84);
+            this.label9.Location = new System.Drawing.Point(355, 86);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(28, 20);
             this.label9.TabIndex = 4;
@@ -596,8 +623,8 @@
             // picContinue
             // 
             this.picContinue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picContinue.Image = global::VietCam.Properties.Resources.Continue;
-            this.picContinue.Location = new System.Drawing.Point(409, 35);
+            this.picContinue.Image = global::MTS_Recorder.Properties.Resources.Continue;
+            this.picContinue.Location = new System.Drawing.Point(467, 37);
             this.picContinue.Name = "picContinue";
             this.picContinue.Size = new System.Drawing.Size(29, 30);
             this.picContinue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -609,8 +636,8 @@
             // camerapic
             // 
             this.camerapic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.camerapic.Image = global::VietCam.Properties.Resources.Capture;
-            this.camerapic.Location = new System.Drawing.Point(498, 26);
+            this.camerapic.Image = global::MTS_Recorder.Properties.Resources.Capture;
+            this.camerapic.Location = new System.Drawing.Point(545, 28);
             this.camerapic.Name = "camerapic";
             this.camerapic.Size = new System.Drawing.Size(51, 53);
             this.camerapic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -622,8 +649,8 @@
             // ptrRec
             // 
             this.ptrRec.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ptrRec.Image = global::VietCam.Properties.Resources.record;
-            this.ptrRec.Location = new System.Drawing.Point(279, 25);
+            this.ptrRec.Image = global::MTS_Recorder.Properties.Resources.record;
+            this.ptrRec.Location = new System.Drawing.Point(341, 27);
             this.ptrRec.Name = "ptrRec";
             this.ptrRec.Size = new System.Drawing.Size(69, 59);
             this.ptrRec.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -634,8 +661,8 @@
             // ptrStop
             // 
             this.ptrStop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ptrStop.Image = global::VietCam.Properties.Resources.Stop;
-            this.ptrStop.Location = new System.Drawing.Point(279, 25);
+            this.ptrStop.Image = global::MTS_Recorder.Properties.Resources.Stop;
+            this.ptrStop.Location = new System.Drawing.Point(341, 27);
             this.ptrStop.Name = "ptrStop";
             this.ptrStop.Size = new System.Drawing.Size(60, 60);
             this.ptrStop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -647,7 +674,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(195)))), ((int)(((byte)(201)))));
-            this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Cursor = System.Windows.Forms.Cursors.SizeAll;
@@ -658,17 +684,6 @@
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
             this.panel3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseUp);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(819, 17);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(46, 39);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "-";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -707,9 +722,10 @@
             // 
             // notifyIcon1
             // 
+            this.notifyIcon1.BalloonTipText = "MTS Recorder";
             this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "VietCam";
+            this.notifyIcon1.Icon = global::MTS_Recorder.Properties.Resources.Icon1;
+            this.notifyIcon1.Text = "MTS Recorder";
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // contextMenuStrip1
@@ -722,26 +738,26 @@
             this.captureImageToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(207, 124);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(212, 124);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
-            this.openToolStripMenuItem.Text = "Mở VietCam";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
+            this.openToolStripMenuItem.Text = "Mở MTS RECORDER";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // recordToolStripMenuItem
             // 
             this.recordToolStripMenuItem.Name = "recordToolStripMenuItem";
-            this.recordToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
+            this.recordToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
             this.recordToolStripMenuItem.Text = "Bắt đầu quay video";
             this.recordToolStripMenuItem.Click += new System.EventHandler(this.recordToolStripMenuItem_Click);
             // 
             // dừngQuayVideoToolStripMenuItem
             // 
             this.dừngQuayVideoToolStripMenuItem.Name = "dừngQuayVideoToolStripMenuItem";
-            this.dừngQuayVideoToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
+            this.dừngQuayVideoToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
             this.dừngQuayVideoToolStripMenuItem.Text = "Dừng quay video";
             this.dừngQuayVideoToolStripMenuItem.Visible = false;
             this.dừngQuayVideoToolStripMenuItem.Click += new System.EventHandler(this.dừngQuayVideoToolStripMenuItem_Click);
@@ -749,7 +765,7 @@
             // captureImageToolStripMenuItem
             // 
             this.captureImageToolStripMenuItem.Name = "captureImageToolStripMenuItem";
-            this.captureImageToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
+            this.captureImageToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
             this.captureImageToolStripMenuItem.Text = "Chụp ảnh màn hình";
             this.captureImageToolStripMenuItem.Click += new System.EventHandler(this.captureImageToolStripMenuItem_Click);
             // 
@@ -757,7 +773,7 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShowShortcutKeys = false;
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
             this.exitToolStripMenuItem.Text = "Thoát";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -766,15 +782,16 @@
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // pictureBox2
+            // label1
             // 
-            this.pictureBox2.Image = global::VietCam.Properties.Resources.MTS_RECORDER;
-            this.pictureBox2.Location = new System.Drawing.Point(490, 187);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(212, 223);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(292, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Hide";
             // 
             // Form1
             // 
@@ -786,11 +803,11 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = global::MTS_Recorder.Properties.Resources.Icon1;
             this.KeyPreview = true;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VietCam";
+            this.Text = "MTS Recorder";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -805,11 +822,13 @@
             this.Listimage.ResumeLayout(false);
             this.About.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnrectop.ResumeLayout(false);
             this.pnrectop.PerformLayout();
@@ -820,7 +839,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptrStop)).EndInit();
             this.panel3.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -879,7 +897,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox camerapic;
-        private System.Windows.Forms.Label VietCam;
+        private System.Windows.Forms.Label MTS_Recorder;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label4;
@@ -892,6 +910,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

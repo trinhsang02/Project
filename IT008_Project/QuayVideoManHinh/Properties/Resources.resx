@@ -124,8 +124,23 @@
   <data name="Continue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Continue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Hide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hidee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hidee .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MTS_RECORDER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MTS_RECORDER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MTS_RECORDER__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MTS_RECORDER (1).ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

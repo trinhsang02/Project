@@ -18,7 +18,7 @@ using AForge.Video;
 using Accord.Video.FFMPEG;
 using System.Runtime.InteropServices;//DllImport
 
-namespace VietCam
+namespace MTS_Recorder
 {
     public partial class Form1 : Form
     {
@@ -133,7 +133,7 @@ namespace VietCam
         string AdrImg;
 
 
-        private string NameApp = "VietCam";
+        private string NameApp = "MTS Recorder";
         private string NameVideo;
         private string NameImg;
         const byte FPS = 10;
@@ -196,7 +196,7 @@ namespace VietCam
 
                     loadXml(false);//load lại ds ảnh
 
-                    DialogResult rs = MessageBox.Show("Đã chụp màn hình, mở xem ngay?", "VietCam", MessageBoxButtons.YesNo,
+                    DialogResult rs = MessageBox.Show("Đã chụp màn hình, mở xem ngay?", "MTS Recorder", MessageBoxButtons.YesNo,
                         MessageBoxIcon.Information);
                     if (rs == DialogResult.Yes)
                     {
@@ -295,7 +295,7 @@ namespace VietCam
                 labe6 = "0";
 
 
-                DialogResult rs = MessageBox.Show("Đã lưu video, mở xem ngay?", "VietCam", MessageBoxButtons.YesNo,
+                DialogResult rs = MessageBox.Show("Đã lưu video, mở xem ngay?", "MTS Recorder", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Information);
                 if (rs == DialogResult.Yes)
                 {
@@ -329,12 +329,20 @@ namespace VietCam
             Screen.Image = AllScreen();
         }
         //Khởi động
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Đặt thuộc tính Dock và Anchor cho tất cả các control
+            foreach (Control control in this.Controls)
+            {
+                control.Dock = DockStyle.Fill;
+                control.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            }
+
             AdrVideo = Properties.Settings.Default.AdrVideo;
             AdrImg = Properties.Settings.Default.AdrImg;
 
-            if (AdrVideo == "NULL" || AdrImg == "NULL") //mới cài vietcam
+            if (AdrVideo == "NULL" || AdrImg == "NULL") //mới cài <MTS Recorder>
             {
                 Properties.Settings.Default.AdrVideo = Environment.GetFolderPath(Environment.SpecialFolder.MyVideos);
                 Properties.Settings.Default.AdrImg = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
@@ -546,15 +554,18 @@ namespace VietCam
             try
             {
                 string pathimage = "ListImage.xml";
-                XDocument XML = XDocument.Load(pathimage);
-                XElement newx =
-                     new XElement("Data",
-                     new XElement("Path", path)
-                );
-                newx.SetAttributeValue("ID", name);
+                if (!File.Exists(pathimage)) {
+                    XDocument XML = XDocument.Load(pathimage);
+                    XElement newx =
+                         new XElement("Data",
+                         new XElement("Path", path)
+                    );
+                    newx.SetAttributeValue("ID", name);
 
-                XML.Element("Datas").Add(newx);
-                XML.Save(pathimage);
+                    XML.Element("Datas").Add(newx);
+                    XML.Save(pathimage);
+                }
+               
 
             }
             catch (Exception err)
@@ -750,9 +761,12 @@ namespace VietCam
         //Ẩn ứng dụng xuống icon thông báo
         private void button3_Click(object sender, EventArgs e) //bấm nút nhỏ ẩn ứng dụng
         {
-
+            button3.BackgroundImage = Properties.Resources.Hide;
+            button3.BackgroundImageLayout = ImageLayout.Stretch;
+            button3.ImageAlign = ContentAlignment.MiddleCenter;  // Hình ảnh ở giữa nút
+            button3.TextImageRelation = TextImageRelation.ImageBeforeText;
             notifyIcon1.Visible = true;
-            notifyIcon1.ShowBalloonTip(500, "Đã ẩn VietCam!", "F8 Bắt đầu/Dừng quay\r\nF9 Chụp màn hình", ToolTipIcon.Info);
+            notifyIcon1.ShowBalloonTip(500, "Đã ẩn MTS Recorder!", "F8 Bắt đầu/Dừng quay\r\nF9 Chụp màn hình", ToolTipIcon.Info);
             this.Hide();
 
         }
@@ -840,6 +854,7 @@ namespace VietCam
         string labe1 = "0";
         string labe2 = "0";
         string labe3 = "0";
+
         string labe4 = "0";
         string labe5 = "0";
         string labe6 = "0";

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3A256636-54BA-453A-B6E8-D8C0BB5D68D0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>VietCam</RootNamespace>
-    <AssemblyName>VietCam</AssemblyName>
+    <RootNamespace>MTS_Recorder</RootNamespace>
+    <AssemblyName>MTS Recorder</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
@@ -55,8 +55,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>App.ico</ApplicationIcon>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
@@ -75,10 +76,6 @@
     </Reference>
     <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
       <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
-    </Reference>
-    <Reference Include="AForge.Video.FFMPEG, Version=2.2.5.0, Culture=neutral, PublicKeyToken=03563089b1be05dd, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\AForge.Video.FFMPEG.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -148,6 +145,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />
+    <Content Include="Icon.ico" />
+    <None Include="Resources\Hidee .png" />
+    <None Include="Resources\Hide1.png" />
+    <None Include="Resources\Hide.png" />
+    <None Include="Resources\Icon.ico" />
+    <None Include="Resources\Icon.png" />
+    <None Include="Resources\MTS_RECORDER %281%29.ico" />
     <None Include="Resources\MTS_RECORDER.png" />
     <None Include="Resources\Pause.png" />
     <None Include="Resources\Continue.png" />
