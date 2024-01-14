@@ -442,9 +442,9 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.MTS_Recorder);
-            this.panel7.Location = new System.Drawing.Point(31, 10);
+            this.panel7.Location = new System.Drawing.Point(31, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(718, 51);
+            this.panel7.Size = new System.Drawing.Size(718, 50);
             this.panel7.TabIndex = 1;
             // 
             // MTS_Recorder
@@ -518,9 +518,9 @@
             // 
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(27, 45);
+            this.label4.Location = new System.Drawing.Point(42, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(649, 118);
+            this.label4.Size = new System.Drawing.Size(649, 205);
             this.label4.TabIndex = 0;
             this.label4.Text = resources.GetString("label4.Text");
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -759,7 +759,7 @@
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
-            this.openToolStripMenuItem.Text = "Mở MTS Recorder";
+            this.openToolStripMenuItem.Text = "Mở MTS RECORDER";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // recordToolStripMenuItem
