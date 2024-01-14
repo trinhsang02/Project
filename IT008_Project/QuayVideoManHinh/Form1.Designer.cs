@@ -744,7 +744,7 @@
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
-            this.openToolStripMenuItem.Text = "Mở MTS RECORDER";
+            this.openToolStripMenuItem.Text = "Mở MTS Recorder";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // recordToolStripMenuItem
