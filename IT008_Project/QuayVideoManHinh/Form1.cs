@@ -26,6 +26,41 @@ namespace MTS_Recorder
         public Form1()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+        }
+        public void Setup()
+        {
+            // Tạo một ImageList để lưu trữ ảnh đại diện
+            ImageList imageList = new ImageList();
+            imageList.ImageSize = new Size(100, 100); // Kích thước của ảnh đại diện
+
+            // Tạo một ListView
+            ListView listView = new ListView();
+            listView.View = View.LargeIcon;
+            listView.LargeImageList = imageList;
+
+            // Đường dẫn đến video
+            string videoPath = AdrVideo;
+
+            // Tạo một đối tượng đại diện cho video
+            VideoFileReader videoReader = new VideoFileReader();
+            videoReader.Open(videoPath);
+
+            // Lấy khung hình đầu tiên của video
+            Bitmap firstFrame = videoReader.ReadVideoFrame();
+
+            // Thêm ảnh đại diện vào ImageList
+            imageList.Images.Add(firstFrame);
+
+            // Tạo một ListViewItem với đường dẫn video
+            ListViewItem item = new ListViewItem(videoPath, 0); // 0 là chỉ số ảnh đại diện trong ImageList
+
+            // Thêm ListViewItem vào ListView
+            lvVideo.Items.Add(item);
+
+            // Đóng đối tượng đọc video
+            videoReader.Close();
         }
         #region Khai báo thư viện
         [DllImport("user32.dll")]
@@ -33,6 +68,16 @@ namespace MTS_Recorder
         [DllImport("user32.dll")]
         public static extern bool UnregisterHotKey(IntPtr hWnd, int id);
         const int MYACTION_HOTKEY_ID = 1;
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // height of ellipse
+            int nHeightEllipse // width of ellipse
+        );
 
         enum KeyModifier
         {
@@ -759,16 +804,11 @@ namespace MTS_Recorder
 
         #region Chức năng phụ
         //Ẩn ứng dụng xuống icon thông báo
-        private void button3_Click(object sender, EventArgs e) //bấm nút nhỏ ẩn ứng dụng
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
-            button3.BackgroundImage = Properties.Resources.Hide;
-            button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.ImageAlign = ContentAlignment.MiddleCenter;  // Hình ảnh ở giữa nút
-            button3.TextImageRelation = TextImageRelation.ImageBeforeText;
             notifyIcon1.Visible = true;
             notifyIcon1.ShowBalloonTip(500, "Đã ẩn MTS Recorder!", "F8 Bắt đầu/Dừng quay\r\nF9 Chụp màn hình", ToolTipIcon.Info);
             this.Hide();
-
         }
         //Thoát ứng dụng
         private void button1_Click(object sender, EventArgs e)
@@ -776,8 +816,18 @@ namespace MTS_Recorder
             _HuyPhimNong();
             Application.Exit();
         }
+               private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            _HuyPhimNong();
+            Application.Exit();
+        }
         //Ẩn xuống Minimized
         private void button2_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
@@ -854,6 +904,11 @@ namespace MTS_Recorder
         string labe1 = "0";
         string labe2 = "0";
         string labe3 = "0";
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
 
         string labe4 = "0";
         string labe5 = "0";

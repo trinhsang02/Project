@@ -69,9 +69,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnrectop = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.lbTime = new System.Windows.Forms.Label();
             this.picPause = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -81,8 +82,8 @@
             this.ptrRec = new System.Windows.Forms.PictureBox();
             this.ptrStop = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -95,7 +96,6 @@
             this.captureImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Home.SuspendLayout();
@@ -111,6 +111,7 @@
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnrectop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPause)).BeginInit();
@@ -119,6 +120,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptrRec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptrStop)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -525,14 +528,38 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(209)))), ((int)(((byte)(211)))));
+            this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.pnrectop);
             this.panel2.Location = new System.Drawing.Point(0, 55);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(981, 149);
             this.panel2.TabIndex = 1;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = global::MTS_Recorder.Properties.Resources.Hidee;
+            this.pictureBox5.Location = new System.Drawing.Point(274, 44);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 5;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(276, 99);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Hide";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -559,20 +586,6 @@
             this.pnrectop.Name = "pnrectop";
             this.pnrectop.Size = new System.Drawing.Size(638, 123);
             this.pnrectop.TabIndex = 0;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.CausesValidation = false;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::MTS_Recorder.Properties.Resources.Hidee;
-            this.button3.Location = new System.Drawing.Point(283, 40);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(64, 58);
-            this.button3.TabIndex = 0;
-            this.button3.UseCompatibleTextRendering = true;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // lbTime
             // 
@@ -674,8 +687,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(195)))), ((int)(((byte)(201)))));
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.panel3.Location = new System.Drawing.Point(-12, -7);
             this.panel3.Name = "panel3";
@@ -685,27 +698,29 @@
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
             this.panel3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseUp);
             // 
-            // button2
+            // pictureBox4
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(871, 17);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(46, 39);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "---";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::MTS_Recorder.Properties.Resources.Mini;
+            this.pictureBox4.Location = new System.Drawing.Point(882, 16);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(43, 36);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // button1
+            // pictureBox3
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(923, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::MTS_Recorder.Properties.Resources.X;
+            this.pictureBox3.Location = new System.Drawing.Point(942, 17);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // timer1
             // 
@@ -782,17 +797,6 @@
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(292, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Hide";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -829,6 +833,7 @@
             this.panel8.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnrectop.ResumeLayout(false);
             this.pnrectop.PerformLayout();
@@ -838,6 +843,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptrRec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptrStop)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -849,8 +856,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox ptrRec;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox ptrStop;
         private System.Windows.Forms.Panel pnrectop;
         private System.Windows.Forms.PictureBox picPause;
@@ -894,7 +899,6 @@
         private System.Windows.Forms.ToolStripMenuItem captureImageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dừngQuayVideoToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox camerapic;
         private System.Windows.Forms.Label MTS_Recorder;
@@ -911,6 +915,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
 

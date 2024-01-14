@@ -163,6 +163,8 @@
   <ItemGroup>
     <Content Include="App.ico" />
     <Content Include="Icon.ico" />
+    <None Include="Resources\Mini.png" />
+    <None Include="Resources\X.png" />
     <None Include="Resources\Hidee .png" />
     <None Include="Resources\Hide1.png" />
     <None Include="Resources\Hide.png" />
