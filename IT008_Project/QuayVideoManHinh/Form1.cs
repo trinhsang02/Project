@@ -171,7 +171,7 @@ namespace MTS_Recorder
         VideoFileWriter writer = new VideoFileWriter();
         string AdrVideo;
         string AdrImg;
-        string FAV;
+
 
         private string NameApp = "MTS Recorder";
         private string NameVideo;
@@ -339,9 +339,7 @@ namespace MTS_Recorder
                     MessageBoxIcon.Information);
                 if (rs == DialogResult.Yes)
                 {
-                    string filePath = lvVideo.Items[lvVideo.Items.Count - 1].SubItems[1].Text + "\\" + lvVideo.Items[lvVideo.Items.Count - 1].Text;
-                    Console.WriteLine("File Path: " + filePath);
-                    OpenFile(filePath);
+                    OpenFile(lvVideo.Items[lvVideo.Items.Count - 1].SubItems[1].Text + "\\" + lvVideo.Items[lvVideo.Items.Count - 1].Text);
                 }
             }
         }
@@ -517,7 +515,6 @@ namespace MTS_Recorder
                 Properties.Settings.Default.AdrVideo = AdrVideo;
                 Properties.Settings.Default.Save();
                 txtAdrVideo.Text = AdrVideo;
-                FAV = folderBrowserDialog1.SelectedPath;
             }
 
         }
@@ -573,6 +570,7 @@ namespace MTS_Recorder
                 string pathvideo = "ListVideo.xml";
                 XDocument XML = XDocument.Load(pathvideo);
                 XElement newx =
+
                 new XElement("Data",
                 new XElement("Path", path)
 
@@ -596,7 +594,7 @@ namespace MTS_Recorder
             try
             {
                 string pathimage = "ListImage.xml";
-                if (!File.Exists(pathimage)) {
+                //if (!File.Exists(pathimage)) {
                     XDocument XML = XDocument.Load(pathimage);
                     XElement newx =
                          new XElement("Data",
@@ -606,7 +604,7 @@ namespace MTS_Recorder
 
                     XML.Element("Datas").Add(newx);
                     XML.Save(pathimage);
-                }
+                
                
 
             }
@@ -631,7 +629,7 @@ namespace MTS_Recorder
 
 
         }
-        //Hàm xóa file và xóa list xml
+        //Hoàm xóa file và xóa list xml
         private void DeleteXml(string ID, bool k) //k=true=> Video
         {
 
@@ -907,7 +905,7 @@ namespace MTS_Recorder
 
         }
 
-        private void lvVideo_SelectedIndexChanged(object sender, EventArgs e)
+        private void lbTime_Click(object sender, EventArgs e)
         {
 
         }
