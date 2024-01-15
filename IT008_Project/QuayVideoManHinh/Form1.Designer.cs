@@ -528,8 +528,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(209)))), ((int)(((byte)(211)))));
-            this.panel2.Controls.Add(this.pictureBox5);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.pnrectop);
             this.panel2.Location = new System.Drawing.Point(0, 55);
@@ -541,7 +539,7 @@
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::MTS_Recorder.Properties.Resources.Hidee;
-            this.pictureBox5.Location = new System.Drawing.Point(274, 44);
+            this.pictureBox5.Location = new System.Drawing.Point(248, 30);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(53, 50);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -554,7 +552,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(276, 99);
+            this.label1.Location = new System.Drawing.Point(250, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 20);
             this.label1.TabIndex = 5;
@@ -574,6 +572,8 @@
             // pnrectop
             // 
             this.pnrectop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(209)))), ((int)(((byte)(211)))));
+            this.pnrectop.Controls.Add(this.pictureBox5);
+            this.pnrectop.Controls.Add(this.label1);
             this.pnrectop.Controls.Add(this.lbTime);
             this.pnrectop.Controls.Add(this.picPause);
             this.pnrectop.Controls.Add(this.label10);
@@ -592,7 +592,7 @@
             this.lbTime.AutoSize = true;
             this.lbTime.Font = new System.Drawing.Font("Microsoft YaHei", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTime.ForeColor = System.Drawing.Color.Maroon;
-            this.lbTime.Location = new System.Drawing.Point(69, 31);
+            this.lbTime.Location = new System.Drawing.Point(3, 31);
             this.lbTime.Name = "lbTime";
             this.lbTime.Size = new System.Drawing.Size(204, 56);
             this.lbTime.TabIndex = 1;
@@ -602,7 +602,7 @@
             // 
             this.picPause.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPause.Image = global::MTS_Recorder.Properties.Resources.Pause;
-            this.picPause.Location = new System.Drawing.Point(467, 37);
+            this.picPause.Location = new System.Drawing.Point(478, 37);
             this.picPause.Name = "picPause";
             this.picPause.Size = new System.Drawing.Size(29, 36);
             this.picPause.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -616,7 +616,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(557, 88);
+            this.label10.Location = new System.Drawing.Point(563, 88);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(28, 20);
             this.label10.TabIndex = 4;
@@ -627,7 +627,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(355, 86);
+            this.label9.Location = new System.Drawing.Point(372, 86);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(28, 20);
             this.label9.TabIndex = 4;
@@ -637,7 +637,7 @@
             // 
             this.picContinue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picContinue.Image = global::MTS_Recorder.Properties.Resources.Continue;
-            this.picContinue.Location = new System.Drawing.Point(467, 37);
+            this.picContinue.Location = new System.Drawing.Point(478, 37);
             this.picContinue.Name = "picContinue";
             this.picContinue.Size = new System.Drawing.Size(29, 30);
             this.picContinue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -650,7 +650,7 @@
             // 
             this.camerapic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.camerapic.Image = global::MTS_Recorder.Properties.Resources.Capture;
-            this.camerapic.Location = new System.Drawing.Point(545, 28);
+            this.camerapic.Location = new System.Drawing.Point(551, 28);
             this.camerapic.Name = "camerapic";
             this.camerapic.Size = new System.Drawing.Size(51, 53);
             this.camerapic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -663,7 +663,7 @@
             // 
             this.ptrRec.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptrRec.Image = global::MTS_Recorder.Properties.Resources.record;
-            this.ptrRec.Location = new System.Drawing.Point(341, 27);
+            this.ptrRec.Location = new System.Drawing.Point(358, 27);
             this.ptrRec.Name = "ptrRec";
             this.ptrRec.Size = new System.Drawing.Size(69, 59);
             this.ptrRec.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -675,7 +675,7 @@
             // 
             this.ptrStop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptrStop.Image = global::MTS_Recorder.Properties.Resources.Stop;
-            this.ptrStop.Location = new System.Drawing.Point(341, 27);
+            this.ptrStop.Location = new System.Drawing.Point(358, 27);
             this.ptrStop.Name = "ptrStop";
             this.ptrStop.Size = new System.Drawing.Size(60, 60);
             this.ptrStop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -832,7 +832,6 @@
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnrectop.ResumeLayout(false);
