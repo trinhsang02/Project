@@ -69,10 +69,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnrectop = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbTime = new System.Windows.Forms.Label();
             this.picPause = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -111,9 +111,9 @@
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnrectop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPause)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picContinue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.camerapic)).BeginInit();
@@ -336,6 +336,7 @@
             this.lvVideo.TabIndex = 0;
             this.lvVideo.UseCompatibleStateImageBehavior = false;
             this.lvVideo.View = System.Windows.Forms.View.Details;
+            this.lvVideo.SelectedIndexChanged += new System.EventHandler(this.lvVideo_SelectedIndexChanged);
             // 
             // Namex
             // 
@@ -535,30 +536,6 @@
             this.panel2.Size = new System.Drawing.Size(981, 149);
             this.panel2.TabIndex = 1;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::MTS_Recorder.Properties.Resources.Hidee;
-            this.pictureBox5.Location = new System.Drawing.Point(248, 30);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(53, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 5;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(250, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Hide";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MTS_Recorder.Properties.Resources.Icon;
@@ -586,6 +563,30 @@
             this.pnrectop.Name = "pnrectop";
             this.pnrectop.Size = new System.Drawing.Size(638, 123);
             this.pnrectop.TabIndex = 0;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = global::MTS_Recorder.Properties.Resources.Hidee;
+            this.pictureBox5.Location = new System.Drawing.Point(248, 30);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 5;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gadugi", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(250, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Hide";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbTime
             // 
@@ -771,7 +772,7 @@
             // 
             // dừngQuayVideoToolStripMenuItem
             // 
-            this.dừngQuayVideoToolStripMenuItem.Name = "StopRecordingVideoToolStripMenuItem";
+            this.dừngQuayVideoToolStripMenuItem.Name = "dừngQuayVideoToolStripMenuItem";
             this.dừngQuayVideoToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
             this.dừngQuayVideoToolStripMenuItem.Text = "Stop recording";
             this.dừngQuayVideoToolStripMenuItem.Visible = false;
@@ -832,10 +833,10 @@
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnrectop.ResumeLayout(false);
             this.pnrectop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPause)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picContinue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.camerapic)).EndInit();
