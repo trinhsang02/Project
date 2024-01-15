@@ -573,7 +573,6 @@ namespace MTS_Recorder
                 string pathvideo = "ListVideo.xml";
                 XDocument XML = XDocument.Load(pathvideo);
                 XElement newx =
-
                 new XElement("Data",
                 new XElement("Path", path)
 
@@ -632,7 +631,7 @@ namespace MTS_Recorder
 
 
         }
-        //Hoàm xóa file và xóa list xml
+        //Hàm xóa file và xóa list xml
         private void DeleteXml(string ID, bool k) //k=true=> Video
         {
 
