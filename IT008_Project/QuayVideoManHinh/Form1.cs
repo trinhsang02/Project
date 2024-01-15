@@ -373,11 +373,7 @@ namespace MTS_Recorder
         private void Form1_Load(object sender, EventArgs e)
         {
             // Đặt thuộc tính Dock và Anchor cho tất cả các control
-            foreach (Control control in this.Controls)
-            {
-                control.Dock = DockStyle.Fill;
-                control.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            }
+            
 
             AdrVideo = Properties.Settings.Default.AdrVideo;
             AdrImg = Properties.Settings.Default.AdrImg;
@@ -906,6 +902,11 @@ namespace MTS_Recorder
         }
 
         private void lbTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnrectop_Paint(object sender, PaintEventArgs e)
         {
 
         }
