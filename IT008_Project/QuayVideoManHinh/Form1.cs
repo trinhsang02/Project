@@ -171,7 +171,7 @@ namespace MTS_Recorder
         VideoFileWriter writer = new VideoFileWriter();
         string AdrVideo;
         string AdrImg;
-
+        string FAV;
 
         private string NameApp = "MTS Recorder";
         private string NameVideo;
@@ -339,7 +339,9 @@ namespace MTS_Recorder
                     MessageBoxIcon.Information);
                 if (rs == DialogResult.Yes)
                 {
-                    OpenFile(lvVideo.Items[lvVideo.Items.Count - 1].SubItems[1].Text + "\\" + lvVideo.Items[lvVideo.Items.Count - 1].Text);
+                    string filePath = lvVideo.Items[lvVideo.Items.Count - 1].SubItems[1].Text + "\\" + lvVideo.Items[lvVideo.Items.Count - 1].Text;
+                    Console.WriteLine("File Path: " + filePath);
+                    OpenFile(filePath);
                 }
             }
         }
@@ -515,6 +517,7 @@ namespace MTS_Recorder
                 Properties.Settings.Default.AdrVideo = AdrVideo;
                 Properties.Settings.Default.Save();
                 txtAdrVideo.Text = AdrVideo;
+                FAV = folderBrowserDialog1.SelectedPath;
             }
 
         }
@@ -901,6 +904,11 @@ namespace MTS_Recorder
         string labe3 = "0";
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lvVideo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
