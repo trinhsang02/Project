@@ -100,11 +100,6 @@ namespace MTS_Recorder
                 RegisterHotKey(this.Handle, Key[0], (int)KeyModifier.None, Keys.F8.GetHashCode());
                 RegisterHotKey(this.Handle, Key[1], (int)KeyModifier.None, Keys.F9.GetHashCode());
 
-                #region Van chua dung toi
-                //RegisterHotKey(this.Handle, id, (int)KeyModifier.Shift, Keys.B.GetHashCode());       // Register Shift + B as global hotkey. 
-                //RegisterHotKey(this.Handle, id, (int)KeyModifier.Control, Keys.C.GetHashCode());       // Register Control + C as global hotkey. 
-                //RegisterHotKey(this.Handle, id, 6, Keys.D.GetHashCode());       // Register Control + Shift + D as global hotkey. 
-                #endregion
             }
             catch (Exception)
             {
@@ -146,7 +141,7 @@ namespace MTS_Recorder
                     {
                         case 2:
                             {
-                                Quay();
+                                Recorder();
                                 break;
                             }
                         case 3:
@@ -182,7 +177,7 @@ namespace MTS_Recorder
         private string NameVideo;
         private string NameImg;
         const byte FPS = 10;
-        private bool flagQuay = false;
+        private bool flagRecorder = false;
 
         private string path;
 
@@ -192,13 +187,13 @@ namespace MTS_Recorder
         #region Xử lý quay và chụp
         private void ptrRec_Click(object sender, EventArgs e)//Nhấn nút rec
         {
-            Quay();
+            Recorder();
 
         }
         //Sự kiện nhất nút Stop
         private void ptrStop_Click(object sender, EventArgs e)
         {
-            Quay();
+            Recorder();
         }
         //nút Pause quay
         private void picPause_Click(object sender, EventArgs e)
@@ -241,7 +236,7 @@ namespace MTS_Recorder
 
                     loadXml(false);//load lại ds ảnh
 
-                    DialogResult rs = MessageBox.Show("Đã chụp màn hình, mở xem ngay?", "MTS Recorder", MessageBoxButtons.YesNo,
+                    DialogResult rs = MessageBox.Show("Screenshot successfully, see the image now?", "MTS Recorder", MessageBoxButtons.YesNo,
                         MessageBoxIcon.Information);
                     if (rs == DialogResult.Yes)
                     {
@@ -250,18 +245,18 @@ namespace MTS_Recorder
                 }
                 else
                 {
-                    MessageBox.Show("Thư mục lưu ảnh không tồn tại, mời chọn thư mục khác!");
+                    MessageBox.Show("The folder you want to save the photo does not exist, please select another folder!");
                 }
 
 
             }
             catch (Exception ec)
             {
-                MessageBox.Show(ec.Message);
+
             }
         }
         //Sự kiện nhất nút Rec
-        private void Quay()
+        private void Recorder()
         {
             //Tên video ban đầu
             NameVideo = NameApp + "-Video-" + DateTime.Now.Day + "-" + DateTime.Now.Month + "-" + DateTime.Now.Year + "-"
@@ -269,7 +264,7 @@ namespace MTS_Recorder
                  + @".mp4";
             string filename = AdrVideo + @"\" + NameVideo;
 
-            if (flagQuay == false) // Nếu chưa quay thì bắt đầu quay
+            if (flagRecorder == false) // Nếu chưa quay thì bắt đầu quay
             {
 
 
@@ -277,7 +272,7 @@ namespace MTS_Recorder
                 {
                     if (File.Exists(filename)) //File không tồn tại thì thêm mới
                     {
-                        MessageBox.Show("File đã tồn tại mời đổi tên khác trong phần Setting!");
+                        MessageBox.Show("The file already exists, please rename it differently in Settings!");
                     }
                     else
                     {
@@ -290,7 +285,7 @@ namespace MTS_Recorder
                         ptrRec.Visible = false; //Ẩn nút rec
                         ptrStop.Visible = true; //Hiện nút stop
                         picPause.Visible = true; //Hiện nút pause
-                        flagQuay = true;//đang quay
+                        flagRecorder = true;//đang quay
 
                         AddVideoXml(AdrVideo, NameVideo); // thêm video vào danh sách
 
@@ -308,7 +303,7 @@ namespace MTS_Recorder
                 }
                 else
                 {
-                    MessageBox.Show("Thư mục lưu video không tồn tại, mời chọn thư mục khác!");
+                    MessageBox.Show("The folder you want to save the video does not exist, please select another folder!");
                 }
             }
             else // nếu đang quay thì xử lý dừng
@@ -318,7 +313,7 @@ namespace MTS_Recorder
                 lbTime.Text = "00:00:00";
                 ptrRec.Visible = true; //Hiện nút rec
                 ptrStop.Visible = false; //Ẩn nút stop
-                flagQuay = flag;//dừng quay
+                flagRecorder = flag;//dừng quay
 
                 //đóng quay video
                 writer.Close();
@@ -340,7 +335,7 @@ namespace MTS_Recorder
                 labe6 = "0";
 
 
-                DialogResult rs = MessageBox.Show("Đã lưu video, mở xem ngay?", "MTS Recorder", MessageBoxButtons.YesNo,
+                DialogResult rs = MessageBox.Show("Video saved successfully, see the video now?", "MTS Recorder", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Information);
                 if (rs == DialogResult.Yes)
                 {
@@ -550,7 +545,7 @@ namespace MTS_Recorder
             }
             catch
             {
-                MessageBox.Show("Thư mục video không tồn tại hoặc đã bị xóa, mời chọn lại thư mục khác!");
+                MessageBox.Show("The video folder does not exist or has been deleted, please select another folder again!");
             }
         }
 
@@ -563,7 +558,7 @@ namespace MTS_Recorder
             }
             catch
             {
-                MessageBox.Show("Thư mục ảnh không tồn tại hoặc đã bị xóa, mời chọn lại thư mục khác!");
+                MessageBox.Show("The image folder does not exist or has been deleted, please select another folder again!");
             }
         }
 
@@ -589,7 +584,7 @@ namespace MTS_Recorder
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message);
+
             }
         }
 
@@ -615,7 +610,7 @@ namespace MTS_Recorder
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message);
+
             }
         }
         //Xóa list xml ảnh
@@ -629,7 +624,7 @@ namespace MTS_Recorder
             }
             else
             {
-                MessageBox.Show("Chọn một file để xóa");
+                MessageBox.Show("Select a file to delete!");
             }
 
 
@@ -658,7 +653,7 @@ namespace MTS_Recorder
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message);
+
             }
         }
         //Mo
@@ -672,7 +667,7 @@ namespace MTS_Recorder
             }
             else
             {
-                MessageBox.Show("Chọn một file để mở");
+                MessageBox.Show("Select a file to open!");
             }
         }
 
@@ -686,7 +681,7 @@ namespace MTS_Recorder
             }
             else
             {
-                MessageBox.Show("Chọn một file để xóa");
+                MessageBox.Show("Select a file to delete!");
             }
 
 
@@ -700,7 +695,7 @@ namespace MTS_Recorder
             }
             catch
             {
-                MessageBox.Show("File đã bị xóa!");
+                MessageBox.Show("File deleted!");
             }
         }
         //Hàm xóa file
@@ -714,12 +709,12 @@ namespace MTS_Recorder
                 }
                 catch
                 {
-                    MessageBox.Show("File đã bị xóa!");
+                    MessageBox.Show("File deleted!");
                 }
             }
             else
             {
-                MessageBox.Show("File đã bị xóa từ trước!");
+                MessageBox.Show("File deleted before!");
             }
         }
         //Load data
@@ -794,7 +789,7 @@ namespace MTS_Recorder
             }
             else
             {
-                MessageBox.Show("Chọn một file để mở");
+                MessageBox.Show("Select a file to open!");
             }
 
 
@@ -807,7 +802,7 @@ namespace MTS_Recorder
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             notifyIcon1.Visible = true;
-            notifyIcon1.ShowBalloonTip(500, "Đã ẩn MTS Recorder!", "F8 Bắt đầu/Dừng quay\r\nF9 Chụp màn hình", ToolTipIcon.Info);
+            notifyIcon1.ShowBalloonTip(500, "Hidden MTS Recorder!", "F8 Start/Stop recording\r\nF9 Screenshot", ToolTipIcon.Info);
             this.Hide();
         }
         //Thoát ứng dụng
@@ -856,15 +851,15 @@ namespace MTS_Recorder
         private void recordToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            Quay();
+            Recorder();
 
             contextMenuStrip1.Items[1].Visible = false;
             contextMenuStrip1.Items[2].Visible = true;
         }
         //Chọn dừng quay
-        private void dừngQuayVideoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void StopRecordingVideoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Quay();
+            Recorder();
 
             contextMenuStrip1.Items[1].Visible = true;
             contextMenuStrip1.Items[2].Visible = false;

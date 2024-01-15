@@ -759,29 +759,29 @@
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
-            this.openToolStripMenuItem.Text = "Mở MTS RECORDER";
+            this.openToolStripMenuItem.Text = "Open MTS Recorder";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // recordToolStripMenuItem
             // 
             this.recordToolStripMenuItem.Name = "recordToolStripMenuItem";
             this.recordToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
-            this.recordToolStripMenuItem.Text = "Bắt đầu quay video";
+            this.recordToolStripMenuItem.Text = "Start recording!";
             this.recordToolStripMenuItem.Click += new System.EventHandler(this.recordToolStripMenuItem_Click);
             // 
             // dừngQuayVideoToolStripMenuItem
             // 
-            this.dừngQuayVideoToolStripMenuItem.Name = "dừngQuayVideoToolStripMenuItem";
+            this.dừngQuayVideoToolStripMenuItem.Name = "StopRecordingVideoToolStripMenuItem";
             this.dừngQuayVideoToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
-            this.dừngQuayVideoToolStripMenuItem.Text = "Dừng quay video";
+            this.dừngQuayVideoToolStripMenuItem.Text = "Stop recording";
             this.dừngQuayVideoToolStripMenuItem.Visible = false;
-            this.dừngQuayVideoToolStripMenuItem.Click += new System.EventHandler(this.dừngQuayVideoToolStripMenuItem_Click);
+            this.dừngQuayVideoToolStripMenuItem.Click += new System.EventHandler(this.StopRecordingVideoToolStripMenuItem_Click);
             // 
             // captureImageToolStripMenuItem
             // 
             this.captureImageToolStripMenuItem.Name = "captureImageToolStripMenuItem";
             this.captureImageToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
-            this.captureImageToolStripMenuItem.Text = "Chụp ảnh màn hình";
+            this.captureImageToolStripMenuItem.Text = "Screen capture!";
             this.captureImageToolStripMenuItem.Click += new System.EventHandler(this.captureImageToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
@@ -789,7 +789,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShowShortcutKeys = false;
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
-            this.exitToolStripMenuItem.Text = "Thoát";
+            this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // timer3
